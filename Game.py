@@ -3,6 +3,7 @@ import random
 
 # Initialize Pygame
 pygame.init()
+image = pygame.image.load("example_image.png")
 
 # Screen dimensions
 SCREEN_WIDTH = 800
@@ -30,12 +31,13 @@ FPS = 60
 class Player(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
-        self.image = pygame.Surface((30, 30))
-        self.image.fill(BLUE)
-        self.rect = self.image.get_rect()
-        self.rect.x = 100
-        self.rect.y = SCREEN_HEIGHT - 100
-        self.velocity = 0
+        #self.image = pygame.Surface((30, 30))
+        #self.image.fill(BLUE)
+        #self.rect = self.image.get_rect()
+        #self.rect.x = 100
+        #self.rect.y = SCREEN_HEIGHT - 100
+        #self.velocity = 0
+        screen.blit(image, (30, 30))
 
     def update(self):
         # Apply gravity
